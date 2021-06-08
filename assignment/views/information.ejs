@@ -1,0 +1,13 @@
+<%- include('header.ejs') -%>
+
+<div>
+    <h1 class = "countryname"><%- country.name %></h1>
+    <ul class = "countryInfo">
+        <% const keys = ['capital', 'nativeName', 'region', 'subregion','demonym']
+            keys.forEach((key) => { %>
+            <li><span class = "keyName"> <%= `${key}:` %> </span><%- country[key]%></li>
+
+        <% }) %>
+    </ul>
+</div>
+<%- include('footer.ejs') -%>

@@ -1,0 +1,21 @@
+<%- include('header.ejs') -%>
+<div>
+    <h3>User Registration</h3>
+    <form action = "/registration" method = "POST">
+        <button type = "submit">Register</button>
+    </form>
+</div>
+    <h1>Select for Country Information</h1>
+    <form action = "/information" method = "POST">
+    <select name = "country" id = "country">
+        <option value = "blank"></option>
+        <% countryName.forEach((name)=> { %> 
+        <option value=<%=name%>>
+        <%-name%>
+        </option>
+        <% }) %>
+    </select>
+    <button type="submit">Search</button>
+    </form>
+</div>
+<%- include('footer.ejs') -%>
